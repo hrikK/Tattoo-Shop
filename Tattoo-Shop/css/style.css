@@ -253,6 +253,7 @@ header li a:hover {
 .stats .content {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 114px;
 }
 .stats .content .box h4 {
@@ -415,6 +416,9 @@ header li a:hover {
 .contact .content .contact-bottom {
     display: flex;
     justify-content: space-between;
+    margin-top: 60px;
+    border-top: 2px solid white;
+    padding-top: 50px;
 }
 .contact .content .icons {
     display: flex;
@@ -436,11 +440,6 @@ header li a:hover {
 .contact .content .address {
     color: white;
     width: 50%;
-}
-.contact .content .contact-bottom {
-    margin-top: 60px;
-    border-top: 2px solid white;
-    padding-top: 50px;
 }
 .contact .content .contact-bottom .address {
     padding: 5px 8px 5px 190px;

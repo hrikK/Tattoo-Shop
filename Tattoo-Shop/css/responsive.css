@@ -161,18 +161,10 @@
         transition: transform .5s;
         cursor: pointer;
     }
-    header .menu-btn:hover {
-        background: url(../img/svg/menu-hover.svg) no-repeat;
-        background-size: cover;
-    }
     header .menu-btn.clicked {
         transform: rotate(-180deg);
         transition: transform .5s;
         background: url(../img/svg/close.svg) no-repeat;
-    }
-    header .menu-btn.clicked:hover {
-        background: url(../img/svg/close-hover.svg) no-repeat;
-        background-size: cover;
     }
     
 
@@ -353,30 +345,31 @@
 }
 @media only screen and (max-width: 745px) {   
     .text-part h2 {
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
     .text-part p {
         width: 90%;
-        font-size: .9em;
-        margin: 6px auto;
-        line-height: 27px;
+        font-size: .7em;
+        margin: 5px auto;
+        line-height: 18px;
+        letter-spacing: 0px;
     }
 
     header {
         padding: 14px 55px;
     }
     header .title, header .title:visited {
-        font-size: 2.3em;
+        font-size: 2.1em;
     }
     header ul.clicked {
-        top: 82px;
+        top: 79px;
     }
     header ul.clicked li{
         border-bottom:rgb(36, 41, 45) solid 3px;
-        padding: 15px 40px;
+        padding: 15px 30px;
     }
     header ul.clicked li a {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     header .menu-btn {
         height: 27px;
@@ -394,10 +387,11 @@
         -webkit-animation-duration: .9s;
     }
     .home .home-left  h2 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .home .home-left p {
-        font-size: .9em;
+        font-size: .8em;
+        letter-spacing: 0;
         margin: 7px 0 15px 0;
     }
     @keyframes home-left-slide { from {transform: translateY(1000px);} to {transform: translateY(0);} }
@@ -412,14 +406,14 @@
         -webkit-animation-duration: .7s;
     }
     .home .home-right .top .img-box1 {
-        width: 185px;
+        width: 51%;
     }
     .home .home-right .bottom {
-        margin-top: 70px;
+        margin-top: 0px;
     }
     .home .home-right .bottom .img-box2 {
-        height: 275px;
-        width: 185px;
+        width: 51%;
+        height: fit-content;
     }
     @keyframes home-right-slide { from {transform: translateY(-500px);} to {transform: translateY(0);} }
 
@@ -427,20 +421,32 @@
     .about {
         padding-top: 100px;
     }
-    .about .text-part p, .about .text-part-2 {
-        width: 90%;
+    .about .text-part p{
+        width: 80%;
+    }
+    .about .text-part-2{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        width: 85%;
+    }
+    .about .text-part-2 .about-parts {
+        width: 73%;
+        margin: 10px 0;
     }
     .about .text-part-2 .about-parts h4 {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .about .text-part-2 .about-parts p {
-        font-size: .8em;
         line-height: 26px;
         margin: 3px auto;
+        font-size: .6em;
+        line-height: 20px;
     }
     .about .btn, .about .btn:visited {
         padding: 5px 20px;
         font-size: .9em;
+        margin-top: 15px;
     }
 
     
@@ -448,11 +454,15 @@
         padding-top: 100px;
     }
     .services .content {
-        margin-top: 50px;
+        margin-top: 35px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     .services .content .box {
-        width: 30%;
-        padding: 20px 0px;
+        width: 50%;
+        padding: 18px 0px;
+        margin: 13px 8px;
     }
     .services .content .box .icon-box{
         width: 45px;
@@ -464,44 +474,52 @@
     }
     .services .content .box p {
         font-size: .8em;
-        line-height: 25px;
-        width: 90%;
+        line-height: 20px;
+        width: 87%;
     }
 
 
     .stats {
-        padding-top: 350px;
-        margin-top: -128px;
-        padding-bottom: 110px;
+        padding-top: 450px;
+        margin-top: -335px;
+        padding-bottom: 75px;
     }
     .stats .content {
-        margin-top: 75px;
+        margin-top: 50px;
     }
     .stats .content .box h4 {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     .stats .content .box p {
         font-size: .9em;
-        margin-top: 1px;
+        margin-top: .9px;
     }
 
-
+    .portfolio {
+        padding-top: 90px;
+    }
     .portfolio .img-part {
-        padding: 30px 10px 0 10px;
-        grid-template-columns: repeat(3, minmax(40px, 140px));
-        grid-column-gap: 45px;
+        padding: 30px 12px 0 12px;
+        grid-template-columns: repeat(3, minmax(20px, 120px));
+        grid-column-gap: 35px;
     }
     .portfolio .img-part .box {
-        height: 200px;
+        height: 160px;
+    }
+    .portfolio .img-part .box div {
+        font-size: 1.2em;
     }
 
 
     .team {
         padding: 100px 0;
     }
+    .team .content {
+        padding: 0 15px;
+    }
     .team .content .box {
-        width: 180px;
-        height: 220px;
+        width: 165px;
+        height: 205px;
         margin: 35px 15px 0 0px;
     }
     .team .content .box .info h3 {
@@ -538,19 +556,23 @@
         margin-top: 25px;
     }
     .contact .content .icons {
-        border-left: .1px solid white;
+        padding-top: 30px;
+        border: 0;
     }
     .contact .content .icons i {
         font-size: 1.2em;
         margin: 0 30px;
     }
     .contact .content .contact-bottom {
-        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
         margin-top: 80px;
     }
     .contact .content .contact-bottom .address {
-        padding: 5px 5px 5px 20px;
-        border-right: .1px solid white;
+        padding: 30px;
+        border: 0;
+        border-bottom: .1px solid white;
     }
     .contact .content .contact-bottom .address div  {
         font-size: .7em;
@@ -564,7 +586,7 @@
 
     .copyright-text {
         font-size: .6em;
-        padding: 13px 0 7px 0;
+        padding: 20px 0 7px 0;
     }
     
     .top-btn, .top-btn:visited {
